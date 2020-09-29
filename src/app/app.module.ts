@@ -9,14 +9,19 @@ import { TweetsListComponent } from './tweets-list/tweets-list.component';
 import {MatButtonModule} from '@angular/material/button';
 import { TweetComponent } from './tweet/tweet.component';
 import {MatCardModule} from '@angular/material/card';
-
+import { CreateTweetComponent } from './create-tweet/create-tweet.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatOptionModule} from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TweetsListComponent,
-    TweetComponent
+    TweetComponent,
+    CreateTweetComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +29,11 @@ import {MatCardModule} from '@angular/material/card';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatOptionModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Tweet} from '../../models/tweet.model';
+import {TweetsAPIService} from '../services/tweets-api.service';
 
 @Component({
   selector: 'app-tweets-list',
@@ -10,7 +11,7 @@ export class TweetsListComponent implements OnInit {
 
   listaTweets: Array<Tweet>;
 
-  constructor() {
+  constructor(private tweetsService: TweetsAPIService) {
     this.listaTweets = new Array<Tweet>();
   }
 
@@ -19,14 +20,7 @@ export class TweetsListComponent implements OnInit {
   }
 
   llenarListadeTweets(): void {
-    const tweet = new Tweet();
-    tweet.id = 1;
-    tweet.author = 'Kevin Montealegre';
-    tweet.device = 'iPhone 11';
-    tweet.location = 'Bogotá';
-    tweet.date = new Date();
-    tweet.text = 'My firts tweet...';
-    this.listaTweets.push(tweet);
+    this.listaTweets = this.tweetsService.traerTweets();
   }
 
 }
