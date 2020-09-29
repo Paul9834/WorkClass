@@ -8,6 +8,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { TweetsListComponent } from './tweets-list/tweets-list.component';
 import {MatButtonModule} from '@angular/material/button';
 import { TweetComponent } from './tweet/tweet.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -22,7 +23,8 @@ import { TweetComponent } from './tweet/tweet.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
