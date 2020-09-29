@@ -25,6 +25,7 @@ export class TweetsListComponent implements OnInit {
     tweet.device = 'iPhone 11';
     tweet.location = 'Bogotá';
     tweet.date = new Date();
+    tweet.text = 'My firts tweet...';
     this.listaTweets.push(tweet);
   }
 
